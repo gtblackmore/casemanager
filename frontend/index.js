@@ -65,4 +65,15 @@ function attorneyFormSubmission(){
 })
   
 }
- 
+
+function deleteAttorney() {
+  let attorneyId = parseInt(event.target.dataset.id)
+  fetch(`${ATTORNEY_URL}/${attorneyId}`, {
+      method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+  })
+  
+}
