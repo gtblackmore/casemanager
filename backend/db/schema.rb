@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_10_004005) do
+ActiveRecord::Schema.define(version: 2020_08_10_041304) do
 
   create_table "attorneys", force: :cascade do |t|
     t.string "first_name"
@@ -20,14 +20,12 @@ ActiveRecord::Schema.define(version: 2020_08_10_004005) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "cases", force: :cascade do |t|
+  create_table "matters", force: :cascade do |t|
     t.string "plaintiff"
     t.string "defendant"
     t.string "case_number"
     t.integer "attorney_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["attorney_id"], name: "index_cases_on_attorney_id"
+    t.index ["attorney_id"], name: "index_matters_on_attorney_id"
   end
 
 end

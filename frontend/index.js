@@ -1,6 +1,6 @@
 const BASE_URL = "http://localhost:3000"
 const ATTORNEY_URL = `${BASE_URL}/attorneys`
-const MATTER_URL = `${BASE_URL}/cases`
+const MATTER_URL = `${BASE_URL}/matters`
 const main = document.querySelector("main")
 
 document.addEventListener("DOMContentLoaded", () => {
