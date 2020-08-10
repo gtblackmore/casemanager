@@ -60,6 +60,7 @@ function attorneyFormSubmission(){
   })
   .then(resp => resp.json())
   .then(attorney => {
+      debugger;
       let a  = new Attorney(attorney)
       a.renderAttorney();
 })

@@ -1,3 +1,3 @@
-class Case < ApplicationRecord
+class Matter < ApplicationRecord
   belongs_to :attorney
 end

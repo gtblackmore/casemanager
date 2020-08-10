@@ -46,6 +46,6 @@ class MattersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def matter_params
-      params.require(:matter).permit(:plaintiff, :defendant, :case_number)
+      params.require(:matter).permit(:plaintiff, :defendant, :case_number, :attorney_id)
     end
 end
