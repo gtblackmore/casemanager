@@ -1,3 +1,3 @@
 class Attorney < ApplicationRecord
-  has_many :cases
+  has_many :matters
 end

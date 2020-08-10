@@ -1,4 +1,4 @@
 class AttorneySerializer < ActiveModel::Serializer
   attributes :id, :first_name, :last_name, :email
-  has_many :cases
+  has_many :matter
 end
