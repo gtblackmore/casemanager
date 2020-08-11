@@ -15,11 +15,11 @@ class Attorney{
         <h3> ${this.firstName} ${this.lastName} </h3>
         <button class="delete-bttn" data-id=${this.id} onclick="deleteAttorney()">Delete Attorney</button>
         <button class="add-case-bttn" data-id=${this.id} onclick="createMatterForm()">Create Matter</button>
-        <li> Cases: <br>
   
         </li>
         
         <ul>
       `
+    
   }
 }

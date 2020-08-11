@@ -17,5 +17,6 @@ class Matter{
         <button class="delete-bttn" data-id=${this.id} onclick="deleteMatter()">Delete Matter</button>
         <ul>
       `
+
   }
 }

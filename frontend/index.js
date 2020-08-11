@@ -60,9 +60,9 @@ function attorneyFormSubmission(){
   })
   .then(resp => resp.json())
   .then(attorney => {
-      debugger;
       let a  = new Attorney(attorney)
       a.renderAttorney();
+      this.location.reload()
 })
   
 }
@@ -84,8 +84,8 @@ function fetchMatter() {
   .then(resp => resp.json())
   .then(matters => {
     for(const matter of matters) {
-      let c = new Matter(matter)
-      c.renderMatter();
+      let m = new Matter(matter)
+      m.renderMatter();
     } 
   })
 }
@@ -95,6 +95,7 @@ function createMatterForm(){
   let attorneyID = parseInt(event.target.dataset.id)
   matterForm.innerHTML += 
   `
+  <h2>Create New Matter</h2>
   <form>
       Plaintiff: <input type="text" id="plaintiff"><br>
       Defendant: <input type="text" id="defendant"><br>
@@ -120,7 +121,6 @@ function matterFormSubmission(){
       defendant: defendant,
       case_number: caseNumber,
       attorney_id: parseInt(attorneyID)
-
   }
 
   fetch(MATTER_URL, {
@@ -130,13 +130,14 @@ function matterFormSubmission(){
           'Content-Type': 'application/json'
         },
       body: JSON.stringify(matter)
-  })
-  .then(resp => resp.json())
-  .then(matter => {
+    })
+    .then(resp => resp.json())
+    .then(matter => {
       let m  = new Matter(matter)
       m.renderMatter();
+
 })
-  
+
 }
 
 function deleteMatter() {
